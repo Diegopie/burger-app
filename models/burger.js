@@ -5,7 +5,7 @@ let burger = {
     all: function(cb) {
         orm.selectAll('burg', function(res) {
             console.table(res);
-            // cb(res);
+            cb(res);
         });
     },
     insert: function() {
@@ -21,6 +21,6 @@ let burger = {
 // orm.insertOne();
 // orm.updateOne();
 
-burger.all();
+// burger.all();
 
 module.exports = burger;

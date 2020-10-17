@@ -1,1 +1,11 @@
-{{ hbsObject }}
+<h2> Fuck you too, handlebars </h2>
+
+<p> {{ burgers }} </p>
+
+<ul>
+    {{#each burgers}}
+    <li>
+        <p>{{this.id}}. {{this.burgerName}}</p>
+    </li>
+    {{/each}}
+</ul>

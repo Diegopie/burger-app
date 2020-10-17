@@ -8,7 +8,7 @@ router.get('/', function(req, res) {
         let hbsObject = {
             burgers: data
         };
-        console.log(data[0]);
+        console.log(data[0].id);
         res.render('index', hbsObject);
     });
 });

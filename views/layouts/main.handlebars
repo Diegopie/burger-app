@@ -3,10 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href='/assets/css/style.css'>
+    <title>Eat Da Burger</title>
 </head>
 <body>
-    <h2>Eat da burger, bitch</h2>
-    {{{ body }}}
+    <header>
+        <section class='sect head'>
+            <!-- <h1>fuck</h1> -->
+            <img class='img' src="assets/img/burg-temp.jpg">  
+        </section>
+    </header>
+    <main>
+        <!-- Contain Title and Desc. -->
+        <section class='sect title'>
+            <h1>Eat the burger, bitch</h1>
+        </section>
+        <section class='sect desc'>
+            <h3>Burgers are expensive, so why not eat a digital, text-only one? Type your favorite burger and smash that devoir button!</h3>
+        </section>
+        <!-- Contain mySQL Burgers -->
+        <section class='sect burg'>
+            {{{ body }}}
+        </section>
+        <!-- Contain Add Burger Text -->
+        <section class='sect create'>
+            <form>
+                <input type='text' placeholder="Create a burger here!">
+                <button type="submit">Create</button>
+            </form>
+        </section>
+    </main>
+    <footer class='sect head'>
+        <h3>Some Text</h3> 
+    </footer>
 </body>
 </html>

@@ -1,0 +1,44 @@
+body {
+    background-color: #f6c9f7;
+}
+
+.sect {
+    display: flex;
+    /* height: 150px; */
+    margin: 0 80px 0 80px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    justify-content: center;
+}
+
+.img {
+    height: auto;
+    width: 80px;
+}
+
+.head {
+    background-color: #ffd412;
+}
+
+.title {
+    background-color: #88ff43;
+}
+
+.desc {
+    background-color: #eb645a;
+}
+
+.burg {
+    background-color: #a36c53;
+}
+
+.notEat { 
+    border-style: solid;
+    /* display: flex; */
+    justify-content: flex-start;
+}
+
+.create {
+    background-color: #f2ef51;
+}
+

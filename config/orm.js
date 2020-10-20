@@ -9,9 +9,14 @@ const orm = {
             cb(res);
         })
     },
-    // INSERT INTO burg (burgerName, isEaten) VALUES ("??", ?)
-    insertOne: function(table, value, eaten) {
-        console.log('orm.js: insertOne');
+    // INSERT INTO burg (burgerName, isEaten) VALUES ("egg burger", 0)
+    insertOne: function(table, col, val, cb) {
+        let query = "INSERT INTO " + table + " ("+col+", isEaten) VALUES ('"+val+"', 0);";
+                console.log("orm.js: "+query);
+        connection.query(query, function(err, result){
+            if (err) throw err;
+            cb(result)
+        })
     },
     // UPDATE burg SET isEaten = 1 WHERE ID=?; 
     updateOne: function(table, id, eaten) {

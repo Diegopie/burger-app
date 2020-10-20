@@ -22,4 +22,5 @@ app.use(routes)
 
 app.listen(PORT, function() {
     console.log("App listening at localhost: " + PORT);
+    console.log('http://localhost:3000/');
 });

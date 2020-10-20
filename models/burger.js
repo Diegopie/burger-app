@@ -1,15 +1,16 @@
 const orm = require('../config/orm');
 
-let burger = {
-        // % This one is working locally! 
+let burger = { 
     all: function(cb) {
         orm.selectAll('burg', function(res) {
-            console.table(res);
+            // console.table(res);
             cb(res);
         });
     },
-    insert: function() {
-        console.log('burger.js: insert');
+    insert: function(col, val, cb) {
+        orm.insertOne("burg", col, val, function(res){
+            cb(res);
+        });
     },
     update: function(){
         console.log('burger.js: update');

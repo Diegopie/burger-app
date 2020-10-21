@@ -19,8 +19,14 @@ const orm = {
         })
     },
     // UPDATE burg SET isEaten = 1 WHERE ID=?; 
-    updateOne: function(table, id, eaten) {
-        console.log('orm.js: updateOne');
+    updateOne: function(table, id, cb) {
+        let query = "UPDATE "+table+" SET isEaten = 1 WHERE "+id; 
+                console.log(query);
+        connection.query(query, function(err, result) {
+            if (err) throw err;
+            cb(result)
+        })
+        
     }
 }
 

@@ -2,6 +2,7 @@ body {
     background-color: #f6c9f7;
 }
 
+/* Settings for Each Container */
 .sect {
     display: flex;
     /* height: 150px; */
@@ -11,11 +12,13 @@ body {
     justify-content: center;
 }
 
+/* Constrain */
 .img {
     height: auto;
     width: 80px;
 }
 
+/* Color For Each Section */
 .head {
     background-color: #ffd412;
 }
@@ -32,13 +35,28 @@ body {
     background-color: #a36c53;
 }
 
-.notEat { 
-    border-style: solid;
-    /* display: flex; */
-    justify-content: flex-start;
-}
-
 .create {
     background-color: #f2ef51;
 }
 
+/* Ind. Burg Style */
+
+.burgers {
+    border-style: solid;
+    /* display: flex;
+    justify-content: flex-start; */
+}
+
+/* .btn {
+    height: 20%;
+    /* margin-top: 15%;
+    margin-left: 20%;
+} */
+
+.eatme { 
+    padding-right: 18%;
+}
+
+.ateme { 
+    padding-left: 18%
+}

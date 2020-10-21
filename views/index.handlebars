@@ -1,6 +1,25 @@
-{{#each burgers}}
-    <article>
-        <h2>{{this.burgerName}}</h2>
-        <button class='btn' value='{{this.id}}'>Eat me, bitch</button>
-    </article>
-{{/each}}
+<section class="eatme">
+    <h2>Ready to monch</h2>
+
+    {{#each burgers}}
+        {{#unless isEaten}}
+            <article class='burgers'>
+                <h2>{{this.burgerName}}</h2>
+                <button class='btn' data-id='{{this.id}}'>Eat me, bitch</button>
+            </article>
+        {{/unless}}
+    {{/each}}
+</section>
+
+<section class="ateme">
+    <h2>Monched</h2>
+
+    {{#each burgers}}
+        {{#if isEaten}}
+            <article class='burgers'>
+                <h2>{{this.burgerName}}</h2>
+                <button class='btn' data-id='{{this.id}}'>Eat me, bitch</button>
+            </article>
+        {{/if}}
+    {{/each}}
+</section>

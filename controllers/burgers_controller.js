@@ -15,14 +15,14 @@ router.get('/', function(req, res) {
 
 // Send New Data to Database
 router.post('/api/burg', function(req, res) {
-    console.log("hit?");
+            // console.log("hit?");
     burger.insert([
         "burgerName"
     ], [
         req.body.burgerName
     ], function(result) {
         let test = JSON.stringify(result)
-        console.log("controller.js: "+ test);
+                // console.log("controller.js: "+ test);
         }
     );
     res.end();
@@ -31,13 +31,11 @@ module.exports = router;
 
 
 
-// Test post insert routes
-    // burger.insert([
-    //     "burgerName"
-    // ], [
-    //     // req.body.burgerName
-    //     "Fat Burger"
-    // ], function(result) {
-    //     console.log(result);
-    //     }
-    // );
+router.put('/api/burg/:id', function(req, res) {
+    const id = "id="+req.params.id
+    console.log('controller: '+id);
+    burger.update(id, function(results){
+        console.log('controller results: '+results);
+    res.end();
+    })
+})

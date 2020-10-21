@@ -12,8 +12,11 @@ let burger = {
             cb(res);
         });
     },
-    update: function(){
-        console.log('burger.js: update');
+    update: function(id, cb){
+        console.log('burg model: '+id);
+        orm.updateOne("burg", id, function(res) {
+            cb(res);
+        })
     },
 };
 

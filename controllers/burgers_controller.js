@@ -25,6 +25,7 @@ router.post('/api/burg', function(req, res) {
         console.log("controller.js: "+ test);
         }
     );
+    res.end();
 });
 module.exports = router;
 

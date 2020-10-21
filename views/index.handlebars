@@ -1,6 +1,6 @@
-<article>
-    {{#each burgers}}
+{{#each burgers}}
+    <article>
         <h2>{{this.burgerName}}</h2>
-        <button id='{{this.id}}'type="submit">Eat me, bitch</button>
-    {{/each}}
-</article>
+        <button class='btn' value='{{this.id}}'>Eat me, bitch</button>
+    </article>
+{{/each}}

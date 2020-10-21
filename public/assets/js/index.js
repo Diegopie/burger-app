@@ -14,4 +14,8 @@ $('#submit').on('submit', function(event) {
     });
 });
 
+$('.btn').on('click', function(event){
+    console.log(this);
+})
+
 // console.log($('#submit')[0].children[0]);

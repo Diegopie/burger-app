@@ -1,5 +1,5 @@
 <section class="eatme">
-    <h2>Ready to monch</h2>
+    <h2 class="text">Ready to monch</h2>
 
     {{#each burgers}}
         {{#unless isEaten}}
@@ -12,13 +12,13 @@
 </section>
 
 <section class="ateme">
-    <h2>Monched</h2>
+    <h2 class="text">Monched</h2>
 
     {{#each burgers}}
         {{#if isEaten}}
             <article class='burgers'>
                 <h2>{{this.burgerName}}</h2>
-                <button class='btn' data-id='{{this.id}}'>Eat me, bitch</button>
+                <button class='btn' data-eat='eaten' data-id='{{this.id}}'>Delete me, bitch</button>
             </article>
         {{/if}}
     {{/each}}

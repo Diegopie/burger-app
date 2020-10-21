@@ -21,13 +21,22 @@ const orm = {
     // UPDATE burg SET isEaten = 1 WHERE ID=?; 
     updateOne: function(table, id, cb) {
         let query = "UPDATE "+table+" SET isEaten = 1 WHERE "+id; 
-                console.log(query);
+                // console.log(query);
         connection.query(query, function(err, result) {
             if (err) throw err;
             cb(result)
         })
-        
-    }
-}
+    },
+    // DELETE FROM burg WHERE id=?
+    deleteOne: function(table, id, cb) {
+        let query = "DELETE FROM "+table+" WHERE "+id+";"
+            console.log(query);
+        connection.query(query, function(err, results){
+            if (err) throw err;
+            cb(results);
+        })
+
+    },
+};
 
 module.exports = orm;

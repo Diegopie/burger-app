@@ -18,7 +18,13 @@ let burger = {
             cb(res);
         })
     },
+    delete: function(id, cb) {
+        orm.deleteOne("burg", id, function(res){
+            cb(res);
+        })
+    }
 };
+
 
 // * TEST ORM EXPORT
 // orm.selectAll();

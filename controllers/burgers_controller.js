@@ -27,15 +27,25 @@ router.post('/api/burg', function(req, res) {
     );
     res.end();
 });
-module.exports = router;
 
 
 
 router.put('/api/burg/:id', function(req, res) {
     const id = "id="+req.params.id
-    console.log('controller: '+id);
+            // console.log('controller: '+id);
     burger.update(id, function(results){
-        console.log('controller results: '+results);
-    res.end();
+            // console.log('controller results: '+results);
+    res.status(200).end();
     })
 })
+
+router.delete('/api/burg/:id', function(req, res) {
+    const id = "id="+req.params.id;
+    burger.delete(id, function(results){
+        res.status(200).end();
+    })
+})
+
+
+
+module.exports = router;

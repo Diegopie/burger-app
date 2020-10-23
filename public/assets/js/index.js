@@ -5,7 +5,7 @@ $('#submit').on('submit', function(event) {
     event.preventDefault();
     // Store User Text Field as An Object
     const userBurg = $('#text').val().trim()
-    console.log(userBurg.length);
+            // console.log(userBurg.length);
     if (userBurg == "") {
         $('#msg').text('Please enter a burger')
         return;

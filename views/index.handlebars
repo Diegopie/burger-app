@@ -5,7 +5,7 @@
         {{#unless isEaten}}
             <article class='burgers'>
                 <h2>{{this.burgerName}}</h2>
-                <button class='btn' data-id='{{this.id}}'>Eat me, bitch</button>
+                <button class='btn' data-id='{{this.id}}'>Eat me</button>
             </article>
         {{/unless}}
     {{/each}}
@@ -18,7 +18,7 @@
         {{#if isEaten}}
             <article class='burgers'>
                 <h2>{{this.burgerName}}</h2>
-                <button class='btn' data-eat='eaten' data-id='{{this.id}}'>Delete me, bitch</button>
+                <button class='btn' data-eat='eaten' data-id='{{this.id}}'>Delete me</button>
             </article>
         {{/if}}
     {{/each}}

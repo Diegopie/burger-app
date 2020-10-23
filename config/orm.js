@@ -12,7 +12,7 @@ const orm = {
     // INSERT INTO burg (burgerName, isEaten) VALUES ("egg burger", 0)
     insertOne: function(table, col, val, cb) {
         let query = "INSERT INTO " + table + " ("+col+", isEaten) VALUES ('"+val+"', 0);";
-                console.log("orm.js: "+query);
+                // console.log("orm.js: "+query);
         connection.query(query, function(err, result){
             if (err) throw err;
             cb(result)
@@ -30,7 +30,7 @@ const orm = {
     // DELETE FROM burg WHERE id=?
     deleteOne: function(table, id, cb) {
         let query = "DELETE FROM "+table+" WHERE "+id+";"
-            console.log(query);
+            // console.log(query);
         connection.query(query, function(err, results){
             if (err) throw err;
             cb(results);

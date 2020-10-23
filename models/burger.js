@@ -13,7 +13,7 @@ let burger = {
         });
     },
     update: function(id, cb){
-        console.log('burg model: '+id);
+                // console.log('burg model: '+id);
         orm.updateOne("burg", id, function(res) {
             cb(res);
         })
